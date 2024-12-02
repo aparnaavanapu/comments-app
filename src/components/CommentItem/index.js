@@ -1,9 +1,12 @@
 import './index.css'
+import {formatDistanceToNow} from 'date-fns'
+
+
 
 const CommentItem=(props)=>{
 
     const {details,toggleLike,deleteComment}=props
-    const {id,name,comment,isLiked,bgColor}=details
+    const {id,name,comment,isLiked,bgColor,timestamp}=details
     const onClickLike=()=>{
         toggleLike(id)
     }
@@ -20,7 +23,10 @@ const CommentItem=(props)=>{
                  {name[0]}
                </div> 
                <div>
+                  <div className="name-timeStamp">
                   <h1 className="name">{name}</h1>
+                  <p className="timestamp">{formatDistanceToNow(new Date(timestamp), { addSuffix: true })}</p>
+                  </div>
                   <p className="comment">{comment}</p>
                 </div>
 

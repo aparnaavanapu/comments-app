@@ -70,6 +70,7 @@
   font-family:"Roboto";
   font-size:22px;
   font-weight:600;
+  margin-right:10px;
 }
 .comment{
   color:#7e858e;
@@ -95,4 +96,8 @@
 }
 hr{
   width:100%;
+}
+.name-timeStamp{
+  display:flex;
+  align-items:center;
 }

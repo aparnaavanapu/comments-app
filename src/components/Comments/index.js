@@ -59,6 +59,7 @@ const initialContainerBackgroundClassNames = [
             name,
             comment,
             bgColor:initialContainerBackgroundClassNames[Math.floor(Math.random() * initialContainerBackgroundClassNames.length)],
+            timestamp: new Date(), 
         }
         this.setState(prevState=>({
             commentsList:[...prevState.commentsList,newComment],
